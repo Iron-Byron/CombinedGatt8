@@ -1,0 +1,86 @@
+ELF Header:
+  Magic:   7f 45 4c 46 01 01 01 00 00 00 00 00 00 00 00 00 
+  Class:                             ELF32
+  Data:                              2's complement, little endian
+  Version:                           1 (current)
+  OS/ABI:                            UNIX - System V
+  ABI Version:                       0
+  Type:                              EXEC (Executable file)
+  Machine:                           ARM
+  Version:                           0x1
+  Entry point address:               0x20861
+  Start of program headers:          52 (bytes into file)
+  Start of section headers:          2641072 (bytes into file)
+  Flags:                             0x5000200, Version5 EABI, soft-float ABI
+  Size of this header:               52 (bytes)
+  Size of program headers:           32 (bytes)
+  Number of program headers:         6
+  Size of section headers:           40 (bytes)
+  Number of section headers:         40
+  Section header string table index: 39
+
+Section Headers:
+  [Nr] Name              Type            Addr     Off    Size   ES Flg Lk Inf Al
+  [ 0]                   NULL            00000000 000000 000000 00      0   0  0
+  [ 1] rom_start         PROGBITS        0000c200 000100 0000dc 00 WAX  0   0  4
+  [ 2] text              PROGBITS        0000c2e0 0001e0 02b1b8 00  AX  0   0  8
+  [ 3] .ARM.exidx        ARM_EXIDX       00037498 02b398 000008 00  AL  2   0  4
+  [ 4] initlevel         PROGBITS        000374a0 02b3a0 0000c8 00   A  0   0  4
+  [ 5] device_area       PROGBITS        00037568 02b468 0000a0 00   A  0   0  4
+  [ 6] sw_isr_table      PROGBITS        00037608 02b508 000138 00  WA  0   0  4
+  [ 7] bt_l2cap_fix[...] PROGBITS        00037740 02b640 000024 00   A  0   0  4
+  [ 8] bt_conn_cb_area   PROGBITS        00037764 02b664 000028 00   A  0   0  4
+  [ 9] bt_gatt_serv[...] PROGBITS        0003778c 02b68c 000018 00   A  0   0  4
+  [10] log_const_area    PROGBITS        000377a4 02b6a4 000128 00   A  0   0  4
+  [11] log_backend_area  PROGBITS        000378cc 02b7cc 000020 00   A  0   0  4
+  [12] mcumgr_handl[...] PROGBITS        000378ec 02b7ec 00000c 00  WA  0   0  4
+  [13] tbss              NOBITS          000378f8 02b7f8 000008 00 WAT  0   0  4
+  [14] rodata            PROGBITS        00037900 02b800 004640 00   A  0   0 16
+  [15] .ramfunc          PROGBITS        20000000 030984 000000 00   W  0   0  1
+  [16] datas             PROGBITS        20000000 02fe40 0007fb 00  WA  0   0  8
+  [17] device_states     PROGBITS        200007fb 03063b 000010 00  WA  0   0  1
+  [18] log_msg_ptr_area  PROGBITS        2000080c 03064c 000004 00  WA  0   0  4
+  [19] k_timer_area      PROGBITS        20000810 030650 000118 00  WA  0   0  8
+  [20] k_mem_slab_area   PROGBITS        20000928 030768 000060 00  WA  0   0  4
+  [21] k_mutex_area      PROGBITS        20000988 0307c8 000014 00  WA  0   0  4
+  [22] k_fifo_area       PROGBITS        2000099c 0307dc 000038 00  WA  0   0  4
+  [23] net_buf_pool_area PROGBITS        200009d4 030814 00016c 00  WA  0   0  4
+  [24] bss               NOBITS          20000b40 0309c0 0030e9 00  WA  0   0  8
+  [25] noinit            NOBITS          20003c40 0309c0 00a64c 00  WA  0   0 64
+  [26] .comment          PROGBITS        00000000 030984 000040 01  MS  0   0  1
+  [27] .debug_aranges    PROGBITS        00000000 0309c8 0042d0 00      0   0  8
+  [28] .debug_info       PROGBITS        00000000 034c98 0ea0c2 00      0   0  1
+  [29] .debug_abbrev     PROGBITS        00000000 11ed5a 021861 00      0   0  1
+  [30] .debug_line       PROGBITS        00000000 1405bb 05ca6b 00      0   0  1
+  [31] .debug_frame      PROGBITS        00000000 19d028 00c58c 00      0   0  4
+  [32] .debug_str        PROGBITS        00000000 1a95b4 025743 01  MS  0   0  1
+  [33] .debug_loc        PROGBITS        00000000 1cecf7 06fa33 00      0   0  1
+  [34] .debug_ranges     PROGBITS        00000000 23e730 00f7e0 00      0   0  8
+  [35] .ARM.attributes   ARM_ATTRIBUTES  00000000 24df10 000032 00      0   0  1
+  [36] .last_section     PROGBITS        0003ca80 030980 000004 00   A  0   0  1
+  [37] .symtab           SYMTAB          00000000 24df44 01ea30 10     38 5194  4
+  [38] .strtab           STRTAB          00000000 26c974 018155 00      0   0  1
+  [39] .shstrtab         STRTAB          00000000 284ac9 0001e7 00      0   0  1
+Key to Flags:
+  W (write), A (alloc), X (execute), M (merge), S (strings), I (info),
+  L (link order), O (extra OS processing required), G (group), T (TLS),
+  C (compressed), x (unknown), o (OS specific), E (exclude),
+  D (mbind), y (purecode), p (processor specific)
+
+Program Headers:
+  Type           Offset   VirtAddr   PhysAddr   FileSiz MemSiz  Flg Align
+  EXIDX          0x02b398 0x00037498 0x00037498 0x00008 0x00008 R   0x4
+  LOAD           0x000100 0x0000c200 0x0000c200 0x2fd40 0x2fd40 RWE 0x10
+  LOAD           0x02fe40 0x20000000 0x0003bf40 0x00b40 0x00b40 RW  0x8
+  LOAD           0x030980 0x0003ca80 0x0003ca80 0x00004 0x00004 R   0x1
+  LOAD           0x000000 0x20000b40 0x20000b40 0x00000 0x0d74c RW  0x40
+  TLS            0x02b7f8 0x000378f8 0x000378f8 0x00000 0x00008 R   0x4
+
+ Section to Segment mapping:
+  Segment Sections...
+   00     .ARM.exidx 
+   01     rom_start text .ARM.exidx initlevel device_area sw_isr_table bt_l2cap_fixed_chan_area bt_conn_cb_area bt_gatt_service_static_area log_const_area log_backend_area mcumgr_handler_area rodata 
+   02     datas device_states log_msg_ptr_area k_timer_area k_mem_slab_area k_mutex_area k_fifo_area net_buf_pool_area 
+   03     .last_section 
+   04     bss noinit 
+   05     tbss 

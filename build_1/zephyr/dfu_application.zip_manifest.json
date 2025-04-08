@@ -1,0 +1,25 @@
+{
+    "format-version": 0,
+    "time": 1744106332,
+    "files": [
+        {
+            "load_address": 49664,
+            "version_MCUBOOT": "0.0.0+0",
+            "type": "application",
+            "board": "nrf52dk_nrf52832",
+            "soc": "nRF52832_QFAA",
+            "size": 199636,
+            "file": "app_update.bin",
+            "modtime": 1744106332
+        }
+    ],
+    "name": "Combined_BLE_gatt8",
+    "firmware": {
+        "zephyr": {
+            "revision": "7e82427d5d575d695d5a07692912a6fe7e93ad0c-dirty"
+        },
+        "nrf": {
+            "revision": "eef645c4a31201df353fdff5447262d7675fa1c1"
+        }
+    }
+}
