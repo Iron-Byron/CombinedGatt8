@@ -1,6 +1,6 @@
 {
     "format-version": 0,
-    "time": 1744106332,
+    "time": 1744117739,
     "files": [
         {
             "load_address": 49664,
@@ -8,15 +8,15 @@
             "type": "application",
             "board": "nrf52dk_nrf52832",
             "soc": "nRF52832_QFAA",
-            "size": 199636,
+            "size": 197592,
             "file": "app_update.bin",
-            "modtime": 1744106332
+            "modtime": 1744117739
         }
     ],
     "name": "Combined_BLE_gatt8",
     "firmware": {
         "zephyr": {
-            "revision": "7e82427d5d575d695d5a07692912a6fe7e93ad0c-dirty"
+            "revision": "7181a12a8ee3e4ea3d345342e95706e55dbdb1b1-dirty"
         },
         "nrf": {
             "revision": "eef645c4a31201df353fdff5447262d7675fa1c1"

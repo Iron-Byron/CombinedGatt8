@@ -31,7 +31,7 @@
 #include <math.h>
 
 /* DEFINE THE TYPE OF PROBE BELOW 'BigProbe' = The Large Probe, any other spelling is the small probe */
-#define BigProbe
+#define BigProb
 /* DEFINE THE TYPE OF PROBE BELOW 'BigProbe' = The Large Probe, any other spelling is the small probe */
 #define NVS_PARTITION		storage_partition
 #define NVS_PARTITION_DEVICE	FIXED_PARTITION_DEVICE(NVS_PARTITION)
@@ -776,8 +776,8 @@ void take_readings(struct adc_sequence *sequence)
     AvgCount = 0;  // Ensure counter values don't accumulate
     AvgTemperature = 0;
     nrf_gpio_pin_set(spPwrEnable1PIN4);
-    nrf_gpio_pin_set(pwr_pins[arrayIndex]);
-    nrf_gpio_pin_set(pwr_pins[5]);
+    // nrf_gpio_pin_set(pwr_pins[arrayIndex]);
+    // nrf_gpio_pin_set(pwr_pins[5]);
     temperature_measure_required=true;
     one_sec_window_active=true;
     enable_one_sec_window_timer();
@@ -1308,12 +1308,13 @@ int main(void)
             temperature[arrayIndex]=calculate_filtered_average();
             // printk("Done");
             #else
-            uint32_t start = k_cycle_get_32();
-            ADC_Get_reading(5,&sequence);
-            uint32_t end = k_cycle_get_32();
-            uint32_t cycles = end - start;
-            uint32_t time_us = k_cyc_to_us_floor32(cycles);
-            printk("ADC read took %u us\n", time_us);
+            nrf_gpio_pin_set(pwr_pins[5]);
+            // uint32_t start = k_cycle_get_32();
+            // ADC_Get_reading(5,&sequence);
+            // uint32_t end = k_cycle_get_32();
+            // uint32_t cycles = end - start;
+            // uint32_t time_us = k_cyc_to_us_floor32(cycles);
+            // printk("ADC read took %u us\n", time_us);
             for(int i=0;i<6;i++)
             {
                 ADC_Get_reading(5,&sequence);
@@ -1490,13 +1491,26 @@ int main(void)
                 BLEon=false;
             }
             k_msleep(100);
-            printk("Starting Advertising\n");
+            printk("Starting Advertising over here\n");
             calculate_moisture();
-            mfg_data[2] = (uint16_t)(Counts[0]/200);
+            // mfg_data[2] = (uint16_t)(Counts[0]/200);
             // mfg_data[2] =(uint16_t)(MoisturePcnt[0]);
-            mfg_data[3] = (uint16_t)(voltage22);
-            mfg_data[4] = temp_high;
-            mfg_data[5] = temp_low;
+            mfg_data[2] = (uint16_t)(voltage22);
+            mfg_data[3] = temp_high;
+            mfg_data[4] = temp_low;
+
+            uint32_t counter = Counts[0];  // Example counter value
+            uint32_t thousands_part = ((counter / 1000) * 1000)/200; // Round down to nearest 1000
+            uint16_t remainder = counter-(thousands_part*200);
+            printk("Counter value in Thousands %d\n:",thousands_part);
+            printk("Counter value remainder %d\n:",remainder);
+            // uint8_t counter_bytes[3];
+            // Break into 4 bytes (little-endian)
+            mfg_data[5] = (thousands_part >> 0) & 0xFF;
+            mfg_data[6] = (remainder >> 8) & 0xFF;
+            mfg_data[7] = remainder & 0xFF;
+            printk("Counter bytes: 0x%02X 0x%02X 0x%02X\n",  mfg_data[5], mfg_data[6], mfg_data[7]);
+
             // mfg_data[6] = wet_cal;
             err = bt_enable(NULL);
             BLEon=true;
