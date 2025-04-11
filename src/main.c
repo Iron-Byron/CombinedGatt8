@@ -31,7 +31,7 @@
 #include <math.h>
 
 /* DEFINE THE TYPE OF PROBE BELOW 'BigProbe' = The Large Probe, any other spelling is the small probe */
-#define BigProb
+#define BigProbe
 /* DEFINE THE TYPE OF PROBE BELOW 'BigProbe' = The Large Probe, any other spelling is the small probe */
 #define NVS_PARTITION		storage_partition
 #define NVS_PARTITION_DEVICE	FIXED_PARTITION_DEVICE(NVS_PARTITION)
@@ -156,9 +156,9 @@ static struct nvs_fs fs;
 static uint8_t command_buf[20]; // Buffer for receiving GATT commands
 
 // Thermistor parameters
-#define R_FIXED 1000.0               // 1kΩ fixed resistor
-#define BETA 4500//3950.0                  // Beta coefficient of the NTC thermistor
-#define R_0 1000.0                    // Thermistor resistance at 25°C (1kΩ)
+#define R_FIXED 10000.0               // 1kΩ fixed resistor
+#define BETA 4250//3950.0                  // Beta coefficient of the NTC thermistor
+#define R_0 10000.0                    // Thermistor resistance at 25°C (1kΩ)
 #define T_0 298.15                   // Temperature in Kelvin at 25°C
 
 #define TIMER_1000MS_INSTANCE 3  // Using TIMER3 for 1000ms timer
@@ -252,14 +252,22 @@ void checkForTargetSequence(void)
     else if (match2)
     {
         nrf_gpio_pin_set(DirPIN7);
-        printk("GWS,%d,%.2f,%d,%.2f,%d,%.2f,%d,%.2f,%d,%.2f,%d,%.2f,%d,15,16,1234567891234567891234567891234\r\n",
-            Counts[0],TempaeratureDegrees[0],
-            Counts[1],TempaeratureDegrees[1],
-            Counts[2],TempaeratureDegrees[2],
-            Counts[3],TempaeratureDegrees[3],
-            Counts[4],TempaeratureDegrees[4],
-            Counts[5],TempaeratureDegrees[5],
+        printk("GWS,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,15,16,1234567891234567891234567891234\r\n",
+            Counts[0],temperature[0],
+            Counts[1],temperature[1],
+            Counts[2],temperature[2],
+            Counts[3],temperature[3],
+            Counts[4],temperature[4],
+            Counts[5],temperature[5],
                     temperature[6]);
+        // printk("GWS,%d,%.2f,%d,%.2f,%d,%.2f,%d,%.2f,%d,%.2f,%d,%.2f,%d,15,16,1234567891234567891234567891234\r\n",
+        //     Counts[0],TempaeratureDegrees[0],
+        //     Counts[1],TempaeratureDegrees[1],
+        //     Counts[2],TempaeratureDegrees[2],
+        //     Counts[3],TempaeratureDegrees[3],
+        //     Counts[4],TempaeratureDegrees[4],
+        //     Counts[5],TempaeratureDegrees[5],
+        //             temperature[6]);
         // printk("GWS,%.1f,%.2f,%.1f,%.2f,%.1f,%.2f,%.1f,%.2f,%.1f,%.2f,%.1f,%.2f,%d,15,16,1234567891234567891234567891234\r\n",
         //     MoisturePcnt[0],TempaeratureDegrees[0],
         //     MoisturePcnt[1],TempaeratureDegrees[1],
@@ -1132,9 +1140,9 @@ void calculate_temperature(void)
         {
             TempaeratureDegrees[i]=0.0;
         }
-        // printk("Temp %d: %d.%01d °C\n", i, 
-        //     (int)TempaeratureDegrees[i], 
-        //     (int)(TempaeratureDegrees[i] * 10) % 10);
+        printk("Temp %d: %d.%01d °C\n", i, 
+            (int)TempaeratureDegrees[i], 
+            (int)(TempaeratureDegrees[i] * 10) % 10);
     }
 }
 
@@ -1305,8 +1313,11 @@ int main(void)
                 ADC_Get_reading(arrayIndex,&sequence);
                 k_msleep(10);
             }
+            // nrf_gpio_pin_set(DirPIN7);
             temperature[arrayIndex]=calculate_filtered_average();
-            // printk("Done");
+            // printk("ADC%d average: %d", arrayIndex, temperature[arrayIndex]);
+            // printk("mV\n");
+            // nrf_gpio_pin_clear(DirPIN7);
             #else
             nrf_gpio_pin_set(pwr_pins[5]);
             // uint32_t start = k_cycle_get_32();
@@ -1341,6 +1352,7 @@ int main(void)
             AvgCount+=counter_val;
             loopCnt++;
             Counts[arrayIndex]=AvgCount;
+            Counts[0]=0;
             AvgCount=0;
             AvgTemperature=0;
             TIMERhandlercounter=0;
@@ -1391,10 +1403,10 @@ int main(void)
                 nrf_gpio_pin_clear(PwrEnable6PIN19);
                 for(int i=0; i<6;i++)
                 {
-                // nrf_gpio_pin_set(DirPIN7);
-                // printk("Array %d Counter average: %d\n",i, Counts[i]);
-                // printk("Array %d Voltage average: %d\n",i, temperature[i]);
-                // nrf_gpio_pin_clear(DirPIN7);
+                nrf_gpio_pin_set(DirPIN7);
+                printk("Array %d Counter average: %d\n",i, Counts[i]);
+                printk("Array %d Voltage average: %d\n",i, temperature[i]);
+                nrf_gpio_pin_clear(DirPIN7);
                 }
                 //Take battery voltage reading
                 readbatt=true;
@@ -1444,16 +1456,15 @@ int main(void)
         {
             // nrf_gpio_pin_set(DirPIN7);
             // printk("readingvoltage\n ");
-            ADC_Get_reading(6,&sequence);
-            for(int i=0;i<10;i++){
+            for(int i=0;i<6;i++){
                 // printk("AM inside the for loop\n");
-                ADC_Get_reading(arrayIndex,&sequence);
-                k_msleep(20);
+                ADC_Get_reading(6,&sequence);
+                k_msleep(10);
             }
             readbatt=false;
             // loopCnt++;
-            temperature[6]=AvgTemperature/10;
-            AvgTemperature=0;
+            temperature[6]=calculate_filtered_average();
+            // AvgTemperature=0;
             // printk("Battery Voltage %d average: %d\n",7, temperature[6]);
             waitforRS =true;
             if(WetCalibration||DryCalibration)
@@ -1462,7 +1473,7 @@ int main(void)
             }
             // nrf_gpio_pin_set(DirPIN7);
             // calculate_moisture();
-            calculate_temperature();
+            // calculate_temperature();
             // nrf_gpio_pin_set(DirPIN7);
             // printk("We are done now");
             // nrf_gpio_pin_clear(DirPIN7);
@@ -1493,7 +1504,6 @@ int main(void)
             k_msleep(100);
             printk("Starting Advertising over here\n");
             calculate_moisture();
-            // mfg_data[2] = (uint16_t)(Counts[0]/200);
             // mfg_data[2] =(uint16_t)(MoisturePcnt[0]);
             mfg_data[2] = (uint16_t)(voltage22);
             mfg_data[3] = temp_high;
