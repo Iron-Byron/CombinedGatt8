@@ -39,26 +39,26 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.6.1/my_apps/PCB_CODE/Combined_BLE_gatt8/build_1/zephyr/subsys/mgmt/mcumgr/mgmt/cmake_install.cmake")
+  include("C:/ncs/v2.6.1/my_apps/PCB_CODE/Combined_BLE_gatt9/build_1/zephyr/subsys/mgmt/mcumgr/mgmt/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.6.1/my_apps/PCB_CODE/Combined_BLE_gatt8/build_1/zephyr/subsys/mgmt/mcumgr/smp/cmake_install.cmake")
+  include("C:/ncs/v2.6.1/my_apps/PCB_CODE/Combined_BLE_gatt9/build_1/zephyr/subsys/mgmt/mcumgr/smp/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.6.1/my_apps/PCB_CODE/Combined_BLE_gatt8/build_1/zephyr/subsys/mgmt/mcumgr/util/cmake_install.cmake")
+  include("C:/ncs/v2.6.1/my_apps/PCB_CODE/Combined_BLE_gatt9/build_1/zephyr/subsys/mgmt/mcumgr/util/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.6.1/my_apps/PCB_CODE/Combined_BLE_gatt8/build_1/zephyr/subsys/mgmt/mcumgr/grp/cmake_install.cmake")
+  include("C:/ncs/v2.6.1/my_apps/PCB_CODE/Combined_BLE_gatt9/build_1/zephyr/subsys/mgmt/mcumgr/grp/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.6.1/my_apps/PCB_CODE/Combined_BLE_gatt8/build_1/zephyr/subsys/mgmt/mcumgr/transport/cmake_install.cmake")
+  include("C:/ncs/v2.6.1/my_apps/PCB_CODE/Combined_BLE_gatt9/build_1/zephyr/subsys/mgmt/mcumgr/transport/cmake_install.cmake")
 endif()
 

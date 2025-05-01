@@ -39,13 +39,13 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/ncs/v2.6.1/my_apps/PCB_CODE/Combined_BLE_gatt8/build_1/mcuboot/modules/nrf/ext/cmake_install.cmake")
-  include("C:/ncs/v2.6.1/my_apps/PCB_CODE/Combined_BLE_gatt8/build_1/mcuboot/modules/nrf/lib/cmake_install.cmake")
-  include("C:/ncs/v2.6.1/my_apps/PCB_CODE/Combined_BLE_gatt8/build_1/mcuboot/modules/nrf/samples/cmake_install.cmake")
-  include("C:/ncs/v2.6.1/my_apps/PCB_CODE/Combined_BLE_gatt8/build_1/mcuboot/modules/nrf/subsys/cmake_install.cmake")
-  include("C:/ncs/v2.6.1/my_apps/PCB_CODE/Combined_BLE_gatt8/build_1/mcuboot/modules/nrf/modules/cmake_install.cmake")
-  include("C:/ncs/v2.6.1/my_apps/PCB_CODE/Combined_BLE_gatt8/build_1/mcuboot/modules/nrf/drivers/cmake_install.cmake")
-  include("C:/ncs/v2.6.1/my_apps/PCB_CODE/Combined_BLE_gatt8/build_1/mcuboot/modules/nrf/tests/cmake_install.cmake")
+  include("C:/ncs/v2.6.1/my_apps/PCB_CODE/Combined_BLE_gatt9/build_1/mcuboot/modules/nrf/ext/cmake_install.cmake")
+  include("C:/ncs/v2.6.1/my_apps/PCB_CODE/Combined_BLE_gatt9/build_1/mcuboot/modules/nrf/lib/cmake_install.cmake")
+  include("C:/ncs/v2.6.1/my_apps/PCB_CODE/Combined_BLE_gatt9/build_1/mcuboot/modules/nrf/samples/cmake_install.cmake")
+  include("C:/ncs/v2.6.1/my_apps/PCB_CODE/Combined_BLE_gatt9/build_1/mcuboot/modules/nrf/subsys/cmake_install.cmake")
+  include("C:/ncs/v2.6.1/my_apps/PCB_CODE/Combined_BLE_gatt9/build_1/mcuboot/modules/nrf/modules/cmake_install.cmake")
+  include("C:/ncs/v2.6.1/my_apps/PCB_CODE/Combined_BLE_gatt9/build_1/mcuboot/modules/nrf/drivers/cmake_install.cmake")
+  include("C:/ncs/v2.6.1/my_apps/PCB_CODE/Combined_BLE_gatt9/build_1/mcuboot/modules/nrf/tests/cmake_install.cmake")
 
 endif()
 

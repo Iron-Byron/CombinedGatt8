@@ -1,4 +1,4 @@
-# Install script for directory: C:/ncs/v2.6.1/my_apps/PCB_CODE/Combined_BLE_gatt8
+# Install script for directory: C:/ncs/v2.6.1/my_apps/PCB_CODE/Combined_BLE_gatt9
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.6.1/my_apps/PCB_CODE/Combined_BLE_gatt8/build_1/zephyr/cmake_install.cmake")
+  include("C:/ncs/v2.6.1/my_apps/PCB_CODE/Combined_BLE_gatt9/build_1/zephyr/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/ncs/v2.6.1/my_apps/PCB_CODE/Combined_BLE_gatt8/build_1/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/ncs/v2.6.1/my_apps/PCB_CODE/Combined_BLE_gatt9/build_1/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -1006,7 +1006,7 @@ arduino_spi: &spi2 {
  status = "okay";
 };
 # 0 "<command-line>" 2
-# 1 "C:/ncs/v2.6.1/my_apps/PCB_CODE/Combined_BLE_gatt8/boards/nrf52dk_nrf52832.overlay" 1
+# 1 "C:/ncs/v2.6.1/my_apps/PCB_CODE/Combined_BLE_gatt9/boards/nrf52dk_nrf52832.overlay" 1
 / {
  zephyr,user {
 

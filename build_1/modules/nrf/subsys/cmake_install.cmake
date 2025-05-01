@@ -39,41 +39,41 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.6.1/my_apps/PCB_CODE/Combined_BLE_gatt8/build_1/modules/nrf/subsys/bluetooth/cmake_install.cmake")
+  include("C:/ncs/v2.6.1/my_apps/PCB_CODE/Combined_BLE_gatt9/build_1/modules/nrf/subsys/bluetooth/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.6.1/my_apps/PCB_CODE/Combined_BLE_gatt8/build_1/modules/nrf/subsys/bootloader/bl_override/cmake_install.cmake")
+  include("C:/ncs/v2.6.1/my_apps/PCB_CODE/Combined_BLE_gatt9/build_1/modules/nrf/subsys/bootloader/bl_override/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.6.1/my_apps/PCB_CODE/Combined_BLE_gatt8/build_1/modules/nrf/subsys/net/cmake_install.cmake")
+  include("C:/ncs/v2.6.1/my_apps/PCB_CODE/Combined_BLE_gatt9/build_1/modules/nrf/subsys/net/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.6.1/my_apps/PCB_CODE/Combined_BLE_gatt8/build_1/modules/nrf/subsys/dfu/cmake_install.cmake")
+  include("C:/ncs/v2.6.1/my_apps/PCB_CODE/Combined_BLE_gatt9/build_1/modules/nrf/subsys/dfu/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.6.1/my_apps/PCB_CODE/Combined_BLE_gatt8/build_1/modules/nrf/subsys/mpsl/cmake_install.cmake")
+  include("C:/ncs/v2.6.1/my_apps/PCB_CODE/Combined_BLE_gatt9/build_1/modules/nrf/subsys/mpsl/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.6.1/my_apps/PCB_CODE/Combined_BLE_gatt8/build_1/modules/nrf/subsys/shell/cmake_install.cmake")
+  include("C:/ncs/v2.6.1/my_apps/PCB_CODE/Combined_BLE_gatt9/build_1/modules/nrf/subsys/shell/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.6.1/my_apps/PCB_CODE/Combined_BLE_gatt8/build_1/modules/nrf/subsys/debug/cmake_install.cmake")
+  include("C:/ncs/v2.6.1/my_apps/PCB_CODE/Combined_BLE_gatt9/build_1/modules/nrf/subsys/debug/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.6.1/my_apps/PCB_CODE/Combined_BLE_gatt8/build_1/modules/nrf/subsys/partition_manager/cmake_install.cmake")
+  include("C:/ncs/v2.6.1/my_apps/PCB_CODE/Combined_BLE_gatt9/build_1/modules/nrf/subsys/partition_manager/cmake_install.cmake")
 endif()
 

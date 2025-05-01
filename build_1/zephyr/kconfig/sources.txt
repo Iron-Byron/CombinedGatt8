@@ -8,11 +8,11 @@ C:\ncs\v2.6.1\modules\lib\memfault-firmware-sdk\ports\zephyr\Kconfig
 C:\ncs\v2.6.1\modules\lib\memfault-firmware-sdk\ports\zephyr\ncs\Kconfig
 C:\ncs\v2.6.1\modules\lib\picolibc\zephyr\Kconfig
 C:\ncs\v2.6.1\modules\lib\zscilib\Kconfig.zscilib
-C:\ncs\v2.6.1\my_apps\PCB_CODE\Combined_BLE_gatt8\Kconfig
-C:\ncs\v2.6.1\my_apps\PCB_CODE\Combined_BLE_gatt8\build_1\Kconfig\Kconfig.dts
-C:\ncs\v2.6.1\my_apps\PCB_CODE\Combined_BLE_gatt8\build_1\Kconfig\Kconfig.modules
-C:\ncs\v2.6.1\my_apps\PCB_CODE\Combined_BLE_gatt8\build_1\Kconfig\Kconfig.shield
-C:\ncs\v2.6.1\my_apps\PCB_CODE\Combined_BLE_gatt8\build_1\Kconfig\Kconfig.shield.defconfig
+C:\ncs\v2.6.1\my_apps\PCB_CODE\Combined_BLE_gatt9\Kconfig
+C:\ncs\v2.6.1\my_apps\PCB_CODE\Combined_BLE_gatt9\build_1\Kconfig\Kconfig.dts
+C:\ncs\v2.6.1\my_apps\PCB_CODE\Combined_BLE_gatt9\build_1\Kconfig\Kconfig.modules
+C:\ncs\v2.6.1\my_apps\PCB_CODE\Combined_BLE_gatt9\build_1\Kconfig\Kconfig.shield
+C:\ncs\v2.6.1\my_apps\PCB_CODE\Combined_BLE_gatt9\build_1\Kconfig\Kconfig.shield.defconfig
 C:\ncs\v2.6.1\nrf\Kconfig.nrf
 C:\ncs\v2.6.1\nrf\boards\shields\nrf21540ek\Kconfig.shield
 C:\ncs\v2.6.1\nrf\boards\shields\nrf7002eb\Kconfig.shield

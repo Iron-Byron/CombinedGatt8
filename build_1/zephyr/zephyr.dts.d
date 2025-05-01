@@ -25,4 +25,4 @@ empty_file.o: C:/ncs/v2.6.1/zephyr/misc/empty_file.c \
  C:/ncs/v2.6.1/zephyr/dts/common/freq.h \
  C:/ncs/v2.6.1/zephyr/dts/arm/nordic/override.dtsi \
  C:/ncs/v2.6.1/zephyr/boards/arm/nrf52dk_nrf52832/nrf52dk_nrf52832-pinctrl.dtsi \
- C:/ncs/v2.6.1/my_apps/PCB_CODE/Combined_BLE_gatt8/boards/nrf52dk_nrf52832.overlay
+ C:/ncs/v2.6.1/my_apps/PCB_CODE/Combined_BLE_gatt9/boards/nrf52dk_nrf52832.overlay

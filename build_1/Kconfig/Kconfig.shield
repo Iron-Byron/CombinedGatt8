@@ -10,4 +10,5 @@ osource "c:/ncs/v2.6.1/my_apps/pcb_code/combined_ble_gatt6/boards/shields/*/Kcon
 osource "c:/ncs/v2.6.1/my_apps/pcb_code/combined_ble_gatt7/boards/shields/*/Kconfig.shield"
 osource "c:/ncs/v2.6.1/my_apps/pcb_code/comble_gatt8temperature/boards/shields/*/Kconfig.shield"
 osource "c:/ncs/v2.6.1/my_apps/pcb_code/combined_ble_gatt8/boards/shields/*/Kconfig.shield"
+osource "c:/ncs/v2.6.1/my_apps/pcb_code/combined_ble_gatt9/boards/shields/*/Kconfig.shield"
 osource "C:/ncs/v2.6.1/nrf/boards/shields/*/Kconfig.shield"

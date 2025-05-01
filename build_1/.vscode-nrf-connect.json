@@ -13,7 +13,7 @@
   "confFiles": [
     "prj.conf"
   ],
-  "buildDirectory": "..\\Combined_BLE_gatt8\\build_1",
+  "buildDirectory": "..\\Combined_BLE_gatt9\\build_1",
   "kconfigFragments": [],
   "snippets": [],
   "dtcOverlays": [],
